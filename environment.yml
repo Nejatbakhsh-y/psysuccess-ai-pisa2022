@@ -1,0 +1,21 @@
+name: psysuccess-ai
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - pyyaml
+  - pyreadstat
+  - matplotlib
+  - plotly
+  - streamlit
+  - shap
+  - joblib
+  - pytest
+  - pyarrow
+  - nbformat
+  - pip

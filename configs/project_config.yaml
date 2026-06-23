@@ -1,0 +1,46 @@
+project:
+  name: PsySuccess AI
+  cycle: PISA 2022
+  domain: mathematics
+
+paths:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  tables_dir: reports/tables
+  figures_dir: reports/figures
+
+files:
+  student_questionnaire: null  # Example: data/raw/CY08MSP_STU_QQQ.sav
+  school_questionnaire: null   # Example: data/raw/CY08MSP_SCH_QQQ.sav
+  cognitive_items: null        # Example: data/raw/CY08MSP_COG.sav
+
+id_columns:
+  student_id_candidates: [CNTSTUID, STUIDSTD, STUDENTID]
+  school_id_candidates: [CNTSCHID, SCHOOLID]
+  country_candidates: [CNT, CNTRYID]
+
+pisa:
+  plausible_value_prefix: PV
+  plausible_value_domain: MATH
+  mathematics_pv_columns: [PV1MATH, PV2MATH, PV3MATH, PV4MATH, PV5MATH, PV6MATH, PV7MATH, PV8MATH, PV9MATH, PV10MATH]
+  success_threshold: 420.0
+  # Approximate Level 2 cut point used here as a configurable project threshold.
+  # Confirm and document the exact reporting threshold before publication.
+
+features:
+  demographic_candidates: [ST004D01T, ST003D02T, IMMIG, LANGN]
+  socioeconomic_candidates: [ESCS, HISEI, HOMEPOS]
+  school_candidates: [SCHLTYPE, CLSIZE, STRATIO]
+  group_for_dif: ST004D01T
+  item_prefix_candidates: [CM, CR, DM, M]
+  minimum_item_valid_rate: 0.20
+  maximum_item_missing_rate: 0.80
+
+modeling:
+  test_size: 0.20
+  random_state: 42
+  calibration_cv: 5
+  min_valid_item_count: 8
+  max_irt_se_for_valid_prediction: 1.25
+  probability_gate_margin: 0.05
