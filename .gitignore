@@ -32,3 +32,6 @@ Thumbs.db
 .vscode/
 .idea/
 !data/raw/.gitkeep
+
+# Raw PISA data and local download files
+data/raw/*
