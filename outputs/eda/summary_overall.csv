@@ -1,0 +1,12 @@
+metric,value
+n_rows,613744.0
+n_columns,61.0
+math_score_mean,440.89939330861074
+math_score_std,98.43606940658161
+math_score_min,39.171299999999995
+math_score_max,843.2881000000001
+student_success_rate,0.5446098047394353
+escs_mean,-0.3104148812802154
+escs_std,1.129914303849182
+escs_min,-6.8407
+escs_max,7.38
