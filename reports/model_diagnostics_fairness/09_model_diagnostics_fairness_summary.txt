@@ -1,0 +1,44 @@
+STEP H: MODEL DIAGNOSTICS, INTERPRETATION, AND FAIRNESS CHECKS
+===========================================================================
+
+Dataset used: C:\Users\nejat\OneDrive\Desktop\UN\Skills\GitHub 2026\psysuccess-ai-pisa2022\psysuccess-ai-pisa2022\data\processed\pisa2022_student_clean.csv
+Original dataset rows: 613,744
+Rows used for modeling: 120,000
+Target column: student_success
+Best diagnostic model: logistic_regression_balanced
+
+Best-model test metrics:
+- Accuracy: 1.0000
+- Precision: 1.0000
+- Recall: 0.9999
+- F1: 1.0000
+- ROC AUC: 1.0000
+- Average precision: 1.0000
+- Brier score: 0.0000
+- Threshold selected from training data: 0.9908
+
+Feature policy:
+- student_success was used only as the prediction target.
+- Plausible-value scores and direct achievement-score columns were excluded from model features.
+- Gender and country were excluded as direct model features when available.
+- ESCS was retained as a substantive background predictor when available.
+
+Fairness / subgroup checks:
+- Subgroup rows produced: 5
+- Flagged subgroup rows: 3
+- A subgroup is flagged when recall gap, predicted-positive-rate gap, or false-positive-rate gap is at least 0.10 in absolute value.
+
+Measurement checks:
+- correlation_predicted_probability_with_math_score: 0.8105
+- correlation_student_success_with_math_score: 0.8103
+
+Main output files:
+- C:\Users\nejat\OneDrive\Desktop\UN\Skills\GitHub 2026\psysuccess-ai-pisa2022\psysuccess-ai-pisa2022\reports\model_diagnostics_fairness\09_model_diagnostics_metrics.csv
+- C:\Users\nejat\OneDrive\Desktop\UN\Skills\GitHub 2026\psysuccess-ai-pisa2022\psysuccess-ai-pisa2022\reports\model_diagnostics_fairness\09_calibration_by_decile.csv
+- C:\Users\nejat\OneDrive\Desktop\UN\Skills\GitHub 2026\psysuccess-ai-pisa2022\psysuccess-ai-pisa2022\reports\model_diagnostics_fairness\09_success_rate_by_probability_decile.csv
+- C:\Users\nejat\OneDrive\Desktop\UN\Skills\GitHub 2026\psysuccess-ai-pisa2022\psysuccess-ai-pisa2022\reports\model_diagnostics_fairness\09_permutation_feature_importance.csv
+- C:\Users\nejat\OneDrive\Desktop\UN\Skills\GitHub 2026\psysuccess-ai-pisa2022\psysuccess-ai-pisa2022\reports\model_diagnostics_fairness\09_subgroup_fairness_metrics.csv
+- C:\Users\nejat\OneDrive\Desktop\UN\Skills\GitHub 2026\psysuccess-ai-pisa2022\psysuccess-ai-pisa2022\reports\model_diagnostics_fairness\09_fairness_flags.csv
+- C:\Users\nejat\OneDrive\Desktop\UN\Skills\GitHub 2026\psysuccess-ai-pisa2022\psysuccess-ai-pisa2022\reports\model_diagnostics_fairness\09_measurement_checks.csv
+- C:\Users\nejat\OneDrive\Desktop\UN\Skills\GitHub 2026\psysuccess-ai-pisa2022\psysuccess-ai-pisa2022\figures\model_diagnostics_fairness
+- C:\Users\nejat\OneDrive\Desktop\UN\Skills\GitHub 2026\psysuccess-ai-pisa2022\psysuccess-ai-pisa2022\models\09_best_diagnostic_student_success_model.joblib

@@ -1,0 +1,3 @@
+model,threshold,test_accuracy,test_precision,test_recall,test_f1,test_roc_auc,test_average_precision,test_brier_score,test_log_loss,train_roc_auc,train_average_precision,roc_auc_gap_train_minus_test
+logistic_regression_balanced,0.9907539846071477,0.9999666666666667,1.0,0.999938792997919,0.9999693955623565,1.0,1.0,1.5117032501259047e-07,0.00016675248208035547,1.0,1.0,0.0
+random_forest_balanced,0.6923518656536806,0.9999,1.0,0.9998163789937569,0.999908181066936,1.0,1.0,0.0016615047923941597,0.020020747851139543,1.0,1.0,0.0
